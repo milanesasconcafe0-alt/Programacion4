@@ -1,0 +1,29 @@
+
+============================================================
+[2026-11-21 10:53:57] [INICIO] Sesión de registro iniciada en Software FJ
+============================================================
+[2026-11-21 10:53:57] [INFO] [Clientes] Cliente registrado exitosamente -> Cliente [C001]: Laura Martínez | Correo: laura.martinez@correo.com | Tel: 3104567890
+[2026-11-21 10:53:57] [INFO] [Clientes] Cliente registrado exitosamente -> Cliente [C002]: Carlos Gómez | Correo: carlos.gomez@empresa.co | Tel: 3209876543
+[2026-11-21 10:53:57] [ERROR] [Clientes] (ID: C003) DatosInvalidosError: [ERR-101] El nombre 'An' es inválido ( pon mínimo 3 caracteres).
+[2026-11-21 10:53:57] [ERROR] [Clientes] (ID: C001) OperacionNoPermitidaError: [ERR-401] El cliente con ID 'C001' ya se encuentra registrado.
+[2026-11-21 10:53:57] [INFO] [Servicios] Servicio agregado -> [Sala] Sala Innovación Norte (Cap: 12 pers.) - $80.0/h [Disponible]
+[2026-11-21 10:53:57] [INFO] [Servicios] Servicio agregado -> [Equipo] Workstation Dell Precision (Gama Alta) - $120.0/día [Disponible]
+[2026-11-21 10:53:57] [INFO] [Servicios] Servicio agregado -> [Asesoría] Arquitectura Cloud y Python con Ing. Luis Donneys - $150.0/h [Disponible]
+[2026-11-21 10:53:57] [ERROR] [Main_Servicios] (Creación directa de servicio inválido) DatosInvalidosError: [ERR-101] La tarifa base (-50.0) debe ser un número mayor a cero.
+[2026-11-21 10:53:57] [INFO] [Reservas] Reserva creada -> Reserva [R001] | Estado: PENDIENTE | Cliente: Laura Martínez | Servicio: Sala Innovación Norte | Duración: 4 | Total: $380.8
+[2026-11-21 10:53:57] [INFO] [Auditoria] Intento de creación de reserva 'R001' finalizado.
+[2026-11-21 10:53:57] [INFO] [Reservas] Reserva creada -> Reserva [R002] | Estado: PENDIENTE | Cliente: Carlos Gómez | Servicio: Workstation Dell Precision | Duración: 5 | Total: $606.9
+[2026-11-21 10:53:57] [INFO] [Auditoria] Intento de creación de reserva 'R002' finalizado.
+[2026-11-21 10:53:57] [ERROR] [Reservas] (Reserva: R003) ReservaInvalidaError: [ERR-301] Imposible crear la reserva 'R003' por referencias inválidas. | Causa original: DatosInvalidosError: [ERR-101] No existe ningún cliente registrado con ID 'C999'.
+[2026-11-21 10:53:57] [INFO] [Auditoria] Intento de creación de reserva 'R003' finalizado.
+[2026-11-21 10:53:57] [ERROR] [Reservas] (Reserva: R004) ReservaInvalidaError: [ERR-301] La asesoría especializada requiere una duración mínima de 0.5 horas.
+[2026-11-21 10:53:57] [INFO] [Auditoria] Intento de creación de reserva 'R004' finalizado.
+[2026-11-21 10:53:57] [INFO] [EstadoReserva] Reserva 'R001' actualizada a estado CONFIRMADA.
+[2026-11-21 10:53:57] [INFO] [EstadoReserva] Reserva 'R001' actualizada a estado PROCESADA.
+[2026-11-21 10:53:57] [ERROR] [EstadoReserva] (ID: R001) OperacionNoPermitidaError: [ERR-401] La reserva R001 ya fue PROCESADA y no puede cancelarse.
+[2026-11-21 10:53:57] [INFO] [EstadoReserva] Reserva 'R002' actualizada a estado CONFIRMADA.
+[2026-11-21 10:53:57] [ERROR] [Reservas] (Reserva: R005) ServicioNoDisponibleError: [ERR-201] El servicio 'Workstation Dell Precision' no se encuentra disponible actualmente.
+[2026-11-21 10:53:57] [INFO] [Auditoria] Intento de creación de reserva 'R005' finalizado.
+[2026-11-21 10:53:57] [INFO] [EstadoReserva] Reserva 'R002' actualizada a estado CANCELADA.
+[2026-11-21 10:53:57] [INFO] [Reservas] Reserva creada -> Reserva [R006] | Estado: PENDIENTE | Cliente: Laura Martínez | Servicio: Workstation Dell Precision | Duración: 3 | Total: $385.56
+[2026-11-21 10:53:57] [INFO] [Auditoria] Intento de creación de reserva 'R006' finalizado.
