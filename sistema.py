@@ -23,7 +23,7 @@ class SistemaSoftwareFJ:
     """
 
     def __init__(self, ruta_log="eventos_sistema.log"):
-        # Almacenamiento exclusivo en listas internas (sin bases de datos)
+        # Almacenamiento solo en listas internas (sin bases de datos)
         self.clientes = []
         self.servicios = []
         self.reservas = []
@@ -37,7 +37,7 @@ class SistemaSoftwareFJ:
         Usa try / except / else para validar duplicados y registrar eventos.
         """
         try:
-            # Verificar que no exista un cliente con el mismo ID
+            # Verifica que no exista un cliente con el mismo ID
             if any(c.id_entidad == str(id_cliente).strip() for c in self.clientes):
                 raise OperacionNoPermitidaError(
                     f"El cliente con ID '{id_cliente}' ya se encuentra registrado."
@@ -124,7 +124,7 @@ class SistemaSoftwareFJ:
                 cliente = self.buscar_cliente(id_cliente)
                 servicio = self.buscar_servicio(id_servicio)
             except ErrorSistemaFJ as error_busqueda:
-                # Encadenamiento explícito: conserva la causa original del fallo
+                # Encadenamiento explícito, esto conserva la causa original del fallo
                 raise ReservaInvalidaError(
                     f"Imposible crear la reserva '{id_reserva}' por referencias inválidas."
                 ) from error_busqueda
